@@ -76,4 +76,5 @@ def isTriangle(sideA, sideB, sideC):
         return 'Triangulo Escaleno'
     return 'Nao é um triangulo'
 
-print(isTriangle(3,2,1))
+# print(isTriangle(3,2,1))
+#----------------------------------------------------------------------------------------
