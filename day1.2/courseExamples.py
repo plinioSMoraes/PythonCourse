@@ -1,4 +1,8 @@
 import os
+import json  # json é um modulo que vem embutido, porém precisamos importá-lo
+import csv # csv é um modulo que vem embutido, porem precisamos importa-lo
+
+os.system('clear') # Limpa a tela pa nois
 
 # Faça um programa que solicite o nome de uma pessoa usuária e imprima-o na vertical. Exemplo:
 def columnName():
@@ -39,4 +43,20 @@ def filterStudents():
             filteredStud[studentName] = studentGrade
     print((filteredStud))
 
-os.system('clear')
+
+# Exemplo de como trabalhar com arquivos json e csv no python
+def howToUseJSON():
+    with open("pokemons.json") as file:
+        content = file.read()  # leitura do arquivo
+        pokemons = json.loads(content)["results"]  # o conteúdo é transformado em estrutura python equivalente, dicionário neste caso.
+        # acessamos a chave results que é onde contém nossa lista de pokemons
+    print(pokemons[0])  # imprime o primeiro pokemon da lista
+
+def howToUseCSV():
+    with open("graduacao_unb.csv", encoding = "utf-8") as file:
+        graduacao_reader = csv.reader(file, delimiter=",", quotechar='"')
+        # Usando o conceito de desempacotamento
+        header, *data = graduacao_reader
+
+    print(data)
+
