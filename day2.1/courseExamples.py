@@ -121,6 +121,7 @@ class MaquinaDeLavar(Eletrodomestico):
 newSecador = Secador('preto', 400, 220, 100)
 newBatedeira = Batedeira('Branca', 500, 127, 300)
 newMaquinaLavar = MaquinaDeLavar('Cinza', 1000, 220, 2000, 10)
+
 print(newSecador.imprimir_info())
 print(newBatedeira.imprimir_info())
 print(newMaquinaLavar.imprimir_info())
